@@ -50,5 +50,3 @@ To compile aarch64 binaries within the container (Will be included by default in
 /usr/bin should be in path by default but if the compiler doesn't show up right away, just:
 1) echo "export PATH=\$PATH:/usr/bin" >> ~/.bashrc
 2) source ~/.bashrc
-
-3) update PATH variable in ~/.bashrc to run the binaries
