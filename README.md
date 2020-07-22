@@ -16,7 +16,7 @@ To build:
 docker build -t qemu_vp:PLATFORM .
 
 To run:
-docker run --hostname builder -it qemu_vp:PLATFORM
+docker run --hostname builder -it qemu_vp:PLATFORM -p 2222:22
 Please note that run command needs to be modified to allow debugging. 
 
 To detach from container press CTRL+p CTRL+q
@@ -27,7 +27,8 @@ sudo service ssh start
 Add the following the your ~/.ssh/config file
 
 	Host qemu_vp
-        	Hostname 172.17.0.2
+        	Hostname localhost
+		Port 2222
         	User peta
         	UserKnownHostsFile /dev/null
         	StrictHostKeyChecking no
@@ -40,7 +41,7 @@ The container has one user "peta" who's password is 123456789
 
 Total build time is around 30 minutes on an i7-9700k with 32 GB ram. 
 
-To compile aarch64 binaries within the container (Will be included by default in future commits)
+To compile aarch64 binaries within the container you must download the linerao aarch64 gcc compiler (Will be included by default in future commits)
 1) ssh into container
 2) cd ~
 3) wget https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
