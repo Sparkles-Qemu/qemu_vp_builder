@@ -10,7 +10,7 @@ Need to download petalinux 2019.2: https://www.xilinx.com/member/forms/download/
 and the Xilinx ZCU102 BSP: https://www.xilinx.com/member/forms/download/xef.html?filename=xilinx-zcu102-v2019.2-final.bsp from Xilinx's website. 
 Once downloaded place in ./build/ directory
 
-Please note that an account with Xilinx is needed to download the above files, additionally, they can only be downloaded by IPs from specific countries, otherwise the website will spit out an export control violation and prevent the download from happening. If you're attempting to download from an unauthorized area, reach out to COE or ... you know ... be creative. There are ways to solve these kinds of problems. 
+Please note that an account with Xilinx is needed to download the above files, additionally, they can only be downloaded by IPs from specific countries, otherwise the website will spit out an export control violation and prevent the download from happening. If you're attempting to download from an unauthorized area, reach out to your institution/ university.
 
 # Build Steps
 
