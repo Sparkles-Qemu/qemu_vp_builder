@@ -19,7 +19,8 @@ Please note that an account with Xilinx is needed to download the above files, a
 2) To build run:
 docker build -t qemu_vp:PLATFORM .
 
-# Run Steps (Forwards external port 2222 to container internal port 22 for ssh and scp)
+# Run Steps 
+These step also forward external port 2222 to container internal port 22 for ssh and scp
 1) docker run --hostname builder -it qemu_vp:PLATFORM -p 2222:22
 2) su peta (password is 123456789)
 
