@@ -1,4 +1,4 @@
-FROM asultan123/qemu_vp:LATEST_V0.1 
+FROM asultan123/qemu_vp:LATEST_V0.2
 
 ARG PETA_RUN_FILE=petalinux_2019.run
 ARG BSP_FILE=xilinx-zcu102-v2019.2-final.bsp
