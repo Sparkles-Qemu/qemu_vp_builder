@@ -4,6 +4,8 @@ Modified from https://github.com/z4yx/petalinux-docker
 
 Builds a full qemu-systemc cosimulation virtual platform
 
+Main advantage over https://hub.docker.com/repository/docker/asultan123/qemu_vp_light is that you can build new kernels/ modify rootfs with petalinux. If you can use Yocto you don't need this. 
+
 # Requirements
 
 Need to download petalinux 2019.2: https://www.xilinx.com/member/forms/download/xef.html?filename=petalinux-v2019.2-final-installer.run
@@ -25,6 +27,20 @@ These step also forward external port 2222 to container internal port 22 for ssh
 2) su peta (password is 123456789)
 
 To detach from container press CTRL+p CTRL+q
+
+# Virtual Enviornment Launch Steps
+Either use tmux or ssh from two terminals
+
+First Terminal
+1) cd systemctlm-cosim-demo
+2) ./launch.sh
+
+Second Terminal
+1) cd xilinx-zcu102-2019.2
+2) ./launch
+
+Second terminal will use petalinux to launch a qemu instance running kernel compiled for aarch64 in ultrascale 
+There's nothing special about petalinux here. You can get xilinx's fork of qemu here https://github.com/Xilinx/qemu and duplicate the command petalinux runs (some args added by petalinux might be deprecated) with relevant kernel files referenced in the qemu launch command. 
 
 # Note on Debugging 
 
